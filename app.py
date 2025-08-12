@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-import pycountry
 
 df = pd.read_csv("https://raw.githubusercontent.com/vqrca/dashboard_salarios_dados/refs/heads/main/dados-imersao-final.csv")
 
@@ -147,5 +146,6 @@ st.subheader("Dados detalhados")
 st.dataframe(df_filtrado)
         
     
+
 
     
