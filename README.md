@@ -1,7 +1,7 @@
 # DashBoard Dados - Área da tecnologia
 ### Projeto de Análise de Dados - Alura
 
-Esse foi um projeto feito em uma Imersão de Dados da [Alura] (https://www.alura.com.br/).
+Esse foi um projeto feito em uma Imersão de Dados da [Alura](https://www.alura.com.br/).
 Um DashBoard mostrando dados relacionados ao mercado de trabalho na área da tecnologia.
 
 ### Como usar?
@@ -9,6 +9,6 @@ Um DashBoard mostrando dados relacionados ao mercado de trabalho na área da tec
 - Para facilitar a busca, você também pode usar o sistema de filtragem no lado esquerdo da página.
 
 ### Você pode acessar a página no link abaixo:
-[Link do Projeto] (https://dashboard-dados-amaral.streamlit.app/)
+[Link do Projeto](https://dashboard-dados-amaral.streamlit.app/)
 
-By [Amaral_kyk] (https://github.com/amaralkyk/)
+By [Amaral_kyk](https://github.com/amaralkyk/)
