@@ -1,7 +1,7 @@
 # DashBoard Dados - Área da tecnologia
 ### Projeto de Análise de Dados - Alura
 
-Esse foi um projeto feito em uma Imersão de Dados da [Alura](https://www.alura.com.br/).
+Esse foi um projeto feito em uma Imersão de Dados da [Alura](https://www.alura.com.br/).  
 Um DashBoard mostrando dados relacionados ao mercado de trabalho na área da tecnologia.
 
 ### Como usar?
