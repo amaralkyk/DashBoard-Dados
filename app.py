@@ -4,13 +4,14 @@ import plotly.express as px
 
 df = pd.read_csv("https://raw.githubusercontent.com/vqrca/dashboard_salarios_dados/refs/heads/main/dados-imersao-final.csv")
 
-
+# ==== Criando a Página ====
 st.set_page_config(
     page_title="Dashboard de Análise de Salários na Área de Dados",
     page_icon="📊",
     layout="wide"
 )
 
+# ==== Criando Filtros de Pesquisa ====
 st.sidebar.header("🔍 Filtros")
 
 anos_disponiveis = sorted(df["ano"].unique())
@@ -44,9 +45,11 @@ df_filtrado = df[
     (df["tamanho_empresa"].isin(tamanhos_selecionados))
 ]
 
+# ==== Título e subtítulo do Site ====
 st.title("🎲 Dashboard de Análise de Salários na Área de Dados")
 st.markdown("Explore os dados salariais na área de dados nos últimos anos. Utilize os filtros à esquerda para refinar sua análise.")
 
+# ==== Informações iniciais ====
 if not df_filtrado.empty:
     salario_medio = df["usd"].mean()
     salario_maximo = df["usd"].max()
@@ -55,13 +58,15 @@ if not df_filtrado.empty:
     
 else:
     salario_medio, salario_mediano, salario_maximo, total_registros, cargo_mais_comum = 0, 0, 0, ""
-    
+
+# ==== Colunas das informações iniciais ====
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Salário Médio", f"${salario_medio:.0f}")
 col2.metric("Salário Máximo", f"${salario_maximo:.0f}")
 col3.metric("Total de Registros", f"{total_registros:,}")
 col4.metric("Cargo mais frequente", cargo_mais_frequente)
 
+# ==== Criação dos Gráficos ====
 st.subheader("Gráficos")
 
 col_graf1, col_graf2 = st.columns(2)
@@ -142,6 +147,7 @@ with col_graf4:
         grafico_paises.update_layout(title= 0.1)
         st.plotly_chart(grafico_paises, use_container_width=True)
         
+# ==== DataFrame completo ====
 st.subheader("Dados detalhados")
 st.dataframe(df_filtrado)
         
@@ -149,3 +155,4 @@ st.dataframe(df_filtrado)
 
 
     
+
